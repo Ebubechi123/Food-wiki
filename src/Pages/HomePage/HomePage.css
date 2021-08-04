@@ -1,0 +1,516 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    height: inherit;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+header{
+    margin-top: 73px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: inherit;
+}
+
+
+.header-title{
+    width: 100%;
+    text-align: center;
+    font-size: -45rem;
+    margin-bottom: 23px;
+}
+
+
+.search-input{
+    border: none;
+    padding: 9px;
+    border-radius: 5px;
+    --search-box-radius: calc(var(--corner-radius) * 2px);
+    font-family: var(--body-font);
+    outline: none;
+    user-select: none;
+    --elevation: 4;
+    border-radius: var(--search-box-radius);
+    transition: all 0.2s ease-in-out 0s;
+    position: relative;
+    background: var(--neutral-layer-floating);
+    display: flex;
+    max-width: 700px;
+    width: 600px;
+    box-shadow: 0 0 calc((var(--elevation) * 0.225px) + 2px) rgba(0, 0, 0, calc(0.11 * (2 - var(--background-luminance, 1)))), 0 calc(var(--elevation) * 0.4px) calc((var(--elevation) * 0.9px)) rgba(0, 0, 0, calc(0.13 * (2 - var(--background-luminance, 1))));
+}
+
+.search-input .root{
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: var(--neutral-foreground-hint);
+    border-radius: var(--search-box-radius) 0 0 var(--search-box-radius);
+    width: 90%;
+}
+.search-input .root form{
+    width: 100%;
+}
+.search-input .root input{
+    appearance: none;
+    background: transparent;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    padding: calc(var(--design-unit) * 2px + 2px) 12px;
+    color: var(--neutral-foreground-rest);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: var(--type-ramp-plus-1-line-height);
+    max-width: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.search-input .root input:focus::placeholder{
+    transform: translateY(0);
+    font-size: 15px;
+    transition: 0.5s ease-in-out;
+    color: grey;
+}
+
+.search{
+    height: auto;
+    position: relative;
+    width: 10%;
+}
+
+.search-icon{
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* Trending Dishes Section */
+
+
+.trending-dishes-wrapper{
+    margin-top: 74px;
+    width: 100%;
+}
+
+
+
+
+
+.trending-dishes-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trending-dishes-title h1{
+    font-size: 27px;
+    margin-left: 42px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.trending-dishes-title  span{
+    margin-right: 42px;
+    color: var(--main-color);
+    cursor: pointer;
+    font-weight: 600;
+}
+.trending-dishes-title  span:hover{
+    transition: 0.5s ease-in-out;
+    color: rgb(3, 65, 46);
+}
+
+
+.trending-dishes-tab{
+    margin-top: 34px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.trending-dishes-tab-col{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.trending-dishes-tab-col a{
+    color: var(--second-text-color);
+    text-decoration: none;
+}
+.trending-dishes-tab-col .dish-name{
+ font-size: 14px;
+ text-align: center;
+}
+
+.trending-dishes-tab-col img{
+    width: 125px;
+    height: 120px;
+    border-radius: 80px;
+    object-fit: cover;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+
+
+
+
+
+/* RECOMMENDED DISHES SECTION */
+
+.recommend-dishes-wrapper{
+    margin-top: 74px;
+    width: 100%;
+}
+
+.recommended-dishes-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.recommended-dishes-title h1{
+    font-size: 27px;
+    margin-left: 42px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+
+
+
+.recommended-dishes-title span{
+    margin-right: 42px;
+    color: var(--main-color);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.recommended-dishes-title span:hover{
+    transition: 0.5s ease-in-out;
+    color: rgb(3, 65, 46);
+}
+
+
+
+.recommended-dishes-tab{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.col-2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 23px;
+    align-items: center
+}
+
+.col-2-img{
+width: calc(100% / 4);
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.col-2 img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 4);
+}
+
+.info h5{
+    font-size: large;
+}
+
+.crumbs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-width: 89px;
+    width: 100%;
+}
+
+
+.favourite-icon{
+    width: calc(100% / 4);
+    display:flex;
+    justify-content: center;
+    font-size: larger;
+    cursor: pointer;
+}
+
+
+.re-cook-button{
+    width: calc(100% / 8);
+    background-color: var(--main-color);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 12px;
+    min-width: 86px;
+    text-align: center;
+}
+
+
+
+
+
+
+.not-selected{
+    color: rgb(224, 224, 224);
+}
+
+
+.selected{
+    background-color: rgb(2, 61, 43);
+}
+
+
+
+
+
+
+
+/* DISPLAY RESULTS */
+
+
+.display-results-wrapper{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.137);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  
+}
+
+.display-results{
+    max-width: 700px;
+    min-width: 300px;
+    width: 80%;
+    /* max-height: 700px;
+    min-height: 500px; */
+    margin: auto;
+    height: 240px;
+    overflow-y: scroll;
+    background: rgb(253, 253, 253);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    position: relative;
+    transition: 0.8s ease-in-out;
+}
+
+.display-results .close{
+    display: block;
+    right: 30px;
+    top: 10px;
+    position: absolute;
+    z-index: 999;
+    font-size: xx-large;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.database-error{
+    position: relative;
+    top: 50%;
+    text-align: center;
+}
+.col-3{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 23px;
+   padding-left: 12px;
+   margin-bottom: 12px;
+}
+
+
+.display-results-image{
+width: 80px;
+height: 80px;
+border-radius: 90px;
+}
+
+
+.display-results-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: baseline;
+}
+
+.display-results-image img:hover{
+    transform: scale(8) rotateX(30);
+    cursor: pointer;
+    }
+
+
+
+    .col-3 button{
+        width: 200px;
+        max-width: 200px;
+        min-width: 150px;
+        align-self: center;
+    }
+.turn-on{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background-color: rgb(12 12 12 / 88%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+@media screen and (max-width:800px) {
+    .search-input{
+        max-width: 350px;
+        min-width: 220px;
+        width: 350px;
+    }
+    
+
+    .search-input .root{
+        width: 90%;
+    }
+
+    .search{
+        width: 10%;
+    }
+
+
+
+    .trending-dishes-title span{
+        margin-right: 22px;
+    }
+}
+
+/* mobile view */
+
+@media screen and (max-width:670px) {
+    .trending-dishes-tab-col img{
+        width: 80px;
+        height: 80px;
+        border-radius: 80px;
+    }
+    .user-profile img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .trending-dishes-title h1{
+        margin-left: 12px;
+        font-size: inherit;
+    }
+.recommended-dishes-title h1{
+    margin-left: 16px;
+    font-size: inherit;
+}
+    
+
+
+.crumbs{
+    width: calc(100%/1);
+    font-size: small;
+}
+
+.info{
+    width: calc(100%/1);
+}
+
+.re-cook-button{
+    width: calc(100% / 4);
+    min-width: 86px;
+}
+
+}
+
+
+
+
+
+@media screen and (max-width:400px) {
+  
+    .search-input{
+        max-width: 250px;
+        min-width: 220px;
+        width: 250px;
+    }
+    .trending-dishes-tab-col .dish-name{
+        font-size: small;
+       }
+
+    
+}
+@media screen and (max-width:300px) {
+  
+    .header-title h1{
+        font-size: 20px;
+    }
+    
+  
+}

@@ -1,0 +1,128 @@
+
+.nav-wrapper{
+    width: 100%;
+    height: 49px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    
+}
+
+
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(248, 250, 249);
+    box-shadow: rgba(233, 233, 233, 0.952) 0px 5px 5px;
+    position: relative;
+}
+
+.menu{
+    display: none;
+}
+
+.close{
+    display: none;
+}
+.user-profile{
+    width: 20%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    float: left;
+}
+.links-wrapper{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+.links{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+
+.links li{
+    list-style-type: none;
+    color: var(--main-color);
+    font-size: -1em;
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width:670px) {
+    .on{
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+
+    }
+    .links-wrapper{
+        width: 100%;
+        display: none;
+       
+      
+    }
+    .links-wrapper-on{
+        width: 100% !important;
+        min-height: 100vh;
+        background: rgba(0, 0, 0, 0.705);
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .links{
+        position: absolute;
+        background-color: var(--text-color);
+        width: 80%;
+        /* max-height: 400px;
+        min-height: 300px; */
+        height: 235px;
+        flex-direction: column;
+        align-items: center;
+        z-index: 999;
+        background-color: rgb(248, 250, 249);
+        box-shadow: rgba(226, 226, 226, 0.952) 0px 5px 5px;
+       
+ 
+
+    }
+.close{
+    display: block;
+    right: 30px;
+    top: 10px;
+    position: absolute;
+    z-index: 999;
+    font-size: xx-large;
+    color: var(--main-color);
+}
+
+
+
+
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: x-large;
+    }
+}
